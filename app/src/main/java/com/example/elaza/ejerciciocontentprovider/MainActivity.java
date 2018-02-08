@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         } while (c.moveToNext());
 
         // Actualizamos un registro de la tabla
-        uri = Uri.parse("content://mi.contect.provider.contactos/contactos/3");
+        uri = Uri.parse("content://mi.content.provider.contactos/contactos/3");
         CR.update(uri, setVALORES(3, "PPPP", 121212121, "xxxx@xxxx.es"), null, null);
         // Y lo mostramos en el log
         c = CR.query(uri, valores_recuperar, null, null, null);
@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Borramos un registro
-        uri = Uri.parse("content://mi.contect.provider.contactos/contactos/4");
+        uri = Uri.parse("content://mi.content.provider.contactos/contactos/4");
         CR.delete(uri, null, null);
 
     }
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Variables
-    private static final Uri Uri_CP = Uri.parse("content://mi.contect.provider.contactos/contactos"); // Contenido de la autoria
+    private static final Uri Uri_CP = Uri.parse("content://mi.content.provider.contactos/contactos"); // Contenido de la autoria
     private Uri uri;
     private Cursor c;
 
